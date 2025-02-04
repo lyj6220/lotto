@@ -139,6 +139,113 @@
             color: #0d6efd;
             font-weight: bold;
         }
+
+        /* 모바일 최적화 스타일 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.5rem;
+            }
+
+            .main-title {
+                padding: 1rem 0;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timer-badge {
+                font-size: 0.7em;
+                margin: 0.5rem 0;
+            }
+
+            .voting-section, .lotto-section {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .form-check-inline {
+                width: calc(33.33% - 0.5rem);  /* 한 줄에 3개씩 */
+                margin: 0.25rem;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .items-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                gap: 0.25rem;
+                padding: 0.5rem;
+            }
+
+            .number-ball {
+                width: 32px;  /* 크기 줄임 */
+                height: 32px;
+                line-height: 32px;
+                font-size: 0.9rem;
+                margin: 0 2px;
+            }
+
+            .lotto-numbers {
+                width: 100%;
+                margin: 0.5rem 0;
+                padding: 0.5rem;
+                background: #f8f9fa;
+                border-radius: 0.5rem;
+                white-space: nowrap;  /* 번호가 한 줄로 유지되도록 */
+                overflow-x: auto;     /* 필요시 가로 스크롤 */
+                text-align: center;
+            }
+
+            #results {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            #results > div {
+                padding: 0.5rem;
+                background: #f8f9fa;
+                border-radius: 0.5rem;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .top-votes {
+                padding: 1rem;
+            }
+
+            .top-vote-item {
+                padding: 0.75rem;
+                margin: 0.25rem 0;
+                font-size: 0.9rem;
+            }
+
+            /* 체크박스와 라벨 정렬 */
+            .form-check-input {
+                margin-right: 0.3rem;
+            }
+
+            .form-check-label {
+                font-size: 0.85rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        /* 태블릿 크기에서는 4개씩 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .form-check-inline {
+                width: calc(25% - 0.5rem);
+            }
+        }
     </style>
 </head>
 <body>
